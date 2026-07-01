@@ -1,8 +1,16 @@
 # Meal Mate
 
-Meal Mate is a platform that is meant to help with sharing and suggesting healthy and delicious meal recipes from different cultures, matching people's health goals and available groceries.
+Meal Mate is a healthy meal recommendation platform. Users will be able to create an account, track ingredients they already have, receive healthy multicultural recipe recommendations, add missing ingredients to a grocery list, and later rate recipes so recommendations can improve over time.
 
-This repository is currently at the project foundation stage. The goal of this initial setup is to define structure and working agreements before implementation begins.
+This repository is being built phase by phase. The current focus is project planning and documentation only. Application code will be added later in small, testable steps.
+
+## Intended Stack
+
+- Backend: Java, Spring Boot, Spring Data JPA, PostgreSQL
+- Frontend: React
+- Machine learning later: Python, pandas, scikit-learn
+- Deployment later: Docker and Docker Compose
+- Authentication later: Spring Security
 
 ## Repository Structure
 
@@ -11,25 +19,60 @@ meal-mate/
   README.md
   AGENTS.md
   docs/
+    PRODUCT_REQUIREMENTS.md
+    ARCHITECTURE.md
+    DATABASE_DESIGN.md
+    API_DESIGN.md
+    ML_PLAN.md
+    DEVELOPMENT_ROADMAP.md
   backend/
   frontend/
   ml-service/
 ```
 
-## Areas
+## Product Goals
 
-- `docs/` - product, architecture, and planning documentation.
-- `backend/` - future API and server-side services.
-- `frontend/` - future user-facing application.
-- `ml-service/` - future recommendation, classification, or nutrition-related ML services.
+Meal Mate should help users answer a practical daily question: "What healthy meal can I make with what I already have?"
 
-## Current Status
+The platform should:
 
-No backend, frontend, or machine learning implementation has been generated yet.
+- Recommend recipes based on pantry ingredients.
+- Support calorie and nutrition goals.
+- Include recipes from multiple cultures and cuisines.
+- Show which ingredients are available and which are missing.
+- Help users build a grocery list.
+- Learn from user ratings, saved recipes, preferences, and interaction history over time.
 
-## Next Steps
+## MVP Features
 
-1. Define product scope and core user flows.
-2. Choose the technology stack for each service area.
-3. Document service boundaries and data ownership.
-4. Add implementation only after the foundation is agreed.
+- User account model planned, with authentication added in a later phase.
+- Pantry ingredient tracking.
+- Recipe browsing and basic search.
+- Recipe recommendations based on available ingredients and nutrition goals.
+- Grocery list for missing ingredients.
+- Basic recipe ratings planned after the first recommendation flow works.
+
+## Future Features
+
+- Spring Security authentication and authorization.
+- Personalized ML recommendations.
+- Cuisine preferences and dietary restrictions.
+- Saved recipes and meal plans.
+- Nutrition dashboards.
+- Dockerized local development.
+- Deployment-ready production configuration.
+
+## Documentation
+
+Start with these planning files:
+
+- [Product Requirements](docs/PRODUCT_REQUIREMENTS.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Database Design](docs/DATABASE_DESIGN.md)
+- [API Design](docs/API_DESIGN.md)
+- [ML Plan](docs/ML_PLAN.md)
+- [Development Roadmap](docs/DEVELOPMENT_ROADMAP.md)
+
+## What Should Be Built First
+
+The first implementation task should be the backend foundation: a minimal Spring Boot project with PostgreSQL configuration, health check endpoint, and clear package structure. After that, add the first database entity and repository tests before building the React frontend.
