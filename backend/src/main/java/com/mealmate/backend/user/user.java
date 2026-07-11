@@ -1,11 +1,11 @@
 package com.mealmate.backend.user;
 
-import com.mealmate.backend.user.user;
+import com.mealmate.backend.user.User;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
-public class user {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,7 +16,7 @@ public class user {
     private Integer calorieGoal;
     private Integer proteinGoal;
 
-    public user() {
+    public User() {
     }
 
     public Long getId() {
