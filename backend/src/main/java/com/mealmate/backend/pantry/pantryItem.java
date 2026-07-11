@@ -1,6 +1,6 @@
 package com.mealmate.backend.pantry;
 
-import com.mealmate.backend.user.user;
+import com.mealmate.backend.user.User;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,7 +16,7 @@ public class pantryItem {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private user user;
+    private User user;
 
     public pantryItem() {
     }
@@ -53,11 +53,11 @@ public class pantryItem {
         this.unit = unit;
     }
 
-    public user getUser() {
+    public User getUser() {
         return user;
     }
     
-    public void setUser(user user) {
+    public void setUser(User user) {
         this.user = user;
     }
 }
