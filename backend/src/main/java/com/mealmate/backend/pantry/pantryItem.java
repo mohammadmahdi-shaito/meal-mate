@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "pantry_items")
-public class pantryItem {
+public class PantryItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +18,7 @@ public class pantryItem {
     @JoinColumn(name = "user_id")
     private User user;
 
-    public pantryItem() {
+    public PantryItem() {
     }
 
     public Long getId() {
