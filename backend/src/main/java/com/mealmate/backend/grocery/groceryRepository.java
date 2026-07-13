@@ -1,5 +1,7 @@
 package com.mealmate.backend.grocery;
 
-public class groceryRepository {
-    
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface GroceryRepository
+        extends JpaRepository<GroceryItem, Long> {
 }

@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/grocery")
-public class groceryController {
+public class GroceryController {
     
     @GetMapping("/items")
     public String getGroceryItems() {
