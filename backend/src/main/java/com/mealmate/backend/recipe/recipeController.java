@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/recipes")
-public class recipeController {
+public class RecipeController {
 
     @GetMapping("/api/recipes")
     public String getRecipes() {
