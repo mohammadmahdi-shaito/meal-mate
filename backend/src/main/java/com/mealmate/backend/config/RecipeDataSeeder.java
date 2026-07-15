@@ -21,7 +21,7 @@ public class RecipeDataSeeder implements CommandLineRunner {
     public void run(String... args) {
 
         // Prevent recipes from being inserted again after every restart
-        if (recipeRepository.Count() > 0) {
+        if (recipeRepository.count() > 0) {
             return;
         }
 

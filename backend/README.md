@@ -10,3 +10,4 @@ Future documentation should define:
 - Authentication and authorization approach.
 - Persistence strategy.
 - Integration points with the frontend and ML service.
+- The backend has a ready to test MVP
