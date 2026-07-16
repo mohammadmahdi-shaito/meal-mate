@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/recipes")
 public class RecipeController {
 
-    @GetMapping("/api/recipes")
+    @GetMapping
     public String getRecipes() {
         return "Recipes endpoint is working!";
     }
@@ -17,7 +17,7 @@ public class RecipeController {
         return "Get recipe by ID endpoint is working for recipe with ID: " + id;
     }
 
-    @PostMapping("/api/recipes")
+    @PostMapping
     public String addRecipe() {
         return "Add recipe endpoint is working!";
     }
