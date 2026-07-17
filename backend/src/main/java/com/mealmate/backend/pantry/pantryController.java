@@ -1,28 +1,48 @@
 package com.mealmate.backend.pantry;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/api/pantry")
 public class PantryController {
     
+    private final PantryService pantryService;
+
+    public PantryController(PantryService pantryService) {
+        this.pantryService = pantryService;
+    }
+
     @GetMapping
-    public String getPantryItems() {
-        return "Pantry endpoint is working!";
+    public Iterable<PantryItem> getPantryItems() {
+        return pantryService.getAllPantryItems();
     }
 
     @PostMapping
-    public String addPantryItem() {
-        return "Add pantry item endpoint is working!";
+    public PantryItem addPantryItem(@RequestBody PantryItem pantryItem) {
+        return pantryService.addPantryItem(pantryItem);
     }
 
-    @PutMapping("/{id}")
-    public String updatePantryItem(@PathVariable Long id) {
-        return "Update pantry item endpoint is working for item with ID: " + id;
+   @GetMapping("/{id}")
+public PantryItem getPantryItemById(@PathVariable Long id) {
+    return pantryService.getAllPantryItems()
+            .stream()
+            .filter(item -> item.getId().equals(id))
+            .findFirst()
+            .orElseThrow(() -> new ResponseStatusException(
+                    HttpStatus.NOT_FOUND,
+                    "Pantry item not found"
+            ));
+}
+
+    @PutMapping("/{id}") 
+    public PantryItem updatePantryItem(@PathVariable Long id, @RequestBody PantryItem updatedItem) {
+        return pantryService.updatePantryItem(id, updatedItem);
     }
 
     @DeleteMapping("/{id}")
-    public String deletePantryItem(@PathVariable Long id) {
-        return "Delete pantry item endpoint is working for item with ID: " + id;
+    public void deletePantryItem(@PathVariable Long id) {
+        pantryService.deletePantryItem(id);
     }
 }
