@@ -1,5 +1,5 @@
 package com.mealmate.backend.recipe;
 
-public class recipeService {
+public class RecipeService {
     
 }

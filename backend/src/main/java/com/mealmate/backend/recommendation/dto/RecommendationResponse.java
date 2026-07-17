@@ -4,10 +4,9 @@ import java.util.List;
 public record RecommendationResponse(
         Long recipeId,
         String recipeName,
-        double score,
-        double matchPercentage,
         int availableIngredients,
         int totalIngredients,
+        double matchPercentage,
         List<String> missingIngredients
 ) {
 }

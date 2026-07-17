@@ -6,10 +6,16 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/recipes")
 public class RecipeController {
+    
+    private final RecipeRepository recipeRepository;
+    
+    public RecipeController(RecipeRepository recipeRepository) {
+        this.recipeRepository = recipeRepository;
+    }
 
     @GetMapping
-    public String getRecipes() {
-        return "Recipes endpoint is working!";
+    public Iterable<Recipe> getRecipes() {
+        return recipeRepository.findAll();
     }
     
     @GetMapping("/{id}")
