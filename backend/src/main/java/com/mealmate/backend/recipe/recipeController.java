@@ -1,41 +1,35 @@
 package com.mealmate.backend.recipe;
 
 import org.springframework.web.bind.annotation.*;
-
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/recipes")
 public class RecipeController {
-    
-    private final RecipeRepository recipeRepository;
-    
-    public RecipeController(RecipeRepository recipeRepository) {
-        this.recipeRepository = recipeRepository;
+
+    private final RecipeService recipeService;
+
+    public RecipeController(RecipeService recipeService) {
+        this.recipeService = recipeService;
     }
 
     @GetMapping
-    public Iterable<Recipe> getRecipes() {
-        return recipeRepository.findAll();
+    public List<Recipe> getAllRecipes() {
+        return recipeService.getAllRecipes();
     }
-    
+
     @GetMapping("/{id}")
-    public String getRecipeById(@PathVariable Long id) {
-        return "Get recipe by ID endpoint is working for recipe with ID: " + id;
+    public Recipe getRecipeById(@PathVariable Long id) {
+        return recipeService.getRecipeById(id);
     }
 
     @PostMapping
-    public String addRecipe() {
-        return "Add recipe endpoint is working!";
-    }
-
-    @PutMapping("/{id}")
-    public String updateRecipe(@PathVariable Long id) {
-        return "Update recipe endpoint is working for recipe with ID: " + id;
+    public Recipe addRecipe(@RequestBody Recipe recipe) {
+        return recipeService.addRecipe(recipe);
     }
 
     @DeleteMapping("/{id}")
-    public String deleteRecipe(@PathVariable Long id) {
-        return "Delete recipe endpoint is working for recipe with ID: " + id;
+    public void deleteRecipe(@PathVariable Long id) {
+        recipeService.deleteRecipe(id);
     }
-
 }
