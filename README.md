@@ -76,3 +76,5 @@ Start with these planning files:
 ## What Should Be Built First
 
 The first implementation task should be the backend foundation: a minimal Spring Boot project with PostgreSQL configuration, health check endpoint, and clear package structure. After that, add the first database entity and repository tests before building the React frontend.
+
+Currently in the phase of UI integeration.
