@@ -3,30 +3,46 @@ package com.mealmate.backend.pantry;
 import com.mealmate.backend.user.User;
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "pantry_items")
 public class PantryItem {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, length = 100)
     private String name;
-    private Double quantity;
+
+    @Column(nullable = false, precision = 10, scale = 3)
+    private BigDecimal quantity;
+
+    @Column(nullable = false, length = 30)
     private String unit;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    public PantryItem() {
+    protected PantryItem() {
+    }
+
+    public PantryItem(
+            String name,
+            BigDecimal quantity,
+            String unit,
+            User user
+    ) {
+        this.name = name;
+        this.quantity = quantity;
+        this.unit = unit;
+        this.user = user;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -37,11 +53,11 @@ public class PantryItem {
         this.name = name;
     }
 
-    public Double getQuantity() {
+    public BigDecimal getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Double quantity) {
+    public void setQuantity(BigDecimal quantity) {
         this.quantity = quantity;
     }
 
@@ -56,7 +72,7 @@ public class PantryItem {
     public User getUser() {
         return user;
     }
-    
+
     public void setUser(User user) {
         this.user = user;
     }
