@@ -569,7 +569,6 @@ It should be removed or replaced when JWT authentication is implemented.
 # Required Tests
 
 The login and JWT implementation should test:
-
 * Correct email and password return a token.
 * Incorrect password returns `401`.
 * Unknown email returns `401`.
@@ -583,9 +582,8 @@ The login and JWT implementation should test:
 * One user cannot access another user's pantry.
 * A regular user cannot perform an administrator-only operation.
 * Passwords and password hashes never appear in API responses.
-
+.
 ---
-
 # Security Notes
 
 * JWT payloads are readable and must not contain secrets.
@@ -615,4 +613,3 @@ The login and JWT implementation should test:
 | Protected endpoints             | Not implemented |
 | User ownership enforcement      | Not implemented |
 | Authorization roles             | Not implemented |
-| JWT integration tests           | Not implemented |
