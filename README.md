@@ -2,8 +2,6 @@
 
 Meal Mate is a healthy meal recommendation platform. Users will be able to create an account, track ingredients they already have, receive healthy multicultural recipe recommendations, add missing ingredients to a grocery list, and later rate recipes so recommendations can improve over time.
 
-This repository is being built phase by phase. The current focus is project planning and documentation only. Application code will be added later in small, testable steps.
-
 ## Intended Stack
 
 - Backend: Java, Spring Boot, Spring Data JPA, PostgreSQL
