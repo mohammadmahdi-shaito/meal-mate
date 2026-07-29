@@ -6,9 +6,9 @@ Meal Mate is a healthy meal recommendation platform. Users will be able to creat
 
 - Backend: Java, Spring Boot, Spring Data JPA, PostgreSQL
 - Frontend: React
-- Machine learning later: Python, pandas, scikit-learn
-- Deployment later: Docker and Docker Compose
-- Authentication later: Spring Security
+- Machine learning: Python, pandas, scikit-learn
+- Deployment: Docker and Docker Compose
+- Authentication: Spring Security
 
 ## Repository Structure
 
