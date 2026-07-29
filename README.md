@@ -1,6 +1,6 @@
 # Meal Mate
 
-Meal Mate is a healthy meal recommendation platform. Users will be able to create an account, track ingredients they already have, receive healthy multicultural recipe recommendations, add missing ingredients to a grocery list, and later rate recipes so recommendations can improve over time.
+Meal Mate is a healthy meal recommendation platform. Users will be able to create an account, track ingredients they already have, receive healthy recipe recommendations, add missing ingredients to a grocery list, and later rate recipes so recommendations can improve over time.
 
 ## Intended Stack
 
