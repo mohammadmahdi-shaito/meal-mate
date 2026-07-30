@@ -98,10 +98,8 @@ Planned React pages:
 - Profile and goals page.
 - Login and registration pages later, when Spring Security is added.
 
-## What To Build First
-
-The first API should be:
-
-- `GET /api/health`
-
-After that, add simple recipe and ingredient read APIs before implementing recommendation logic.
+## Done API endpoints:
+- pantry endpoint
+- user endpoint
+- recommendation endpoint
+- authentication endpoint
