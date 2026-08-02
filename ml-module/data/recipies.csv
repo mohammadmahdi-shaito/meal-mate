@@ -1,0 +1,10 @@
+recipe_id,name,cuisine,calories,protein,rating,created_at
+1,Chicken Shawarma Bowl,Lebanese,520,42,4.7,2026-06-01
+2,Lentil Soup,Lebanese,310,18,4.5,2026-06-03
+3,Vegetable Curry,Indian,430,14,4.4,2026-06-05
+4,Grilled Salmon Bowl,Japanese,610,46,4.8,2026-06-07
+5,Chickpea Salad,Mediterranean,380,,4.3,2026-06-09
+6,Beef Tacos,Mexican,690,35,4.1,2026-06-11
+7,Tomato Pasta,Italian,560,20,,2026-06-13
+8,Falafel Wrap,Lebanese,470,16,4.2,not-a-date
+1,Chicken Shawarma Bowl,Lebanese,520,42,4.7,2026-06-01
