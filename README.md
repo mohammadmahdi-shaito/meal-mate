@@ -71,7 +71,7 @@ Start with these planning files:
 - [ML Plan](docs/ML_PLAN.md)
 - [Development Roadmap](docs/DEVELOPMENT_ROADMAP.md)
 
-## What Should Be Built First
+## MVP Plan
 
 The first implementation task should be the backend foundation: a minimal Spring Boot project with PostgreSQL configuration, health check endpoint, and clear package structure. After that, add the first database entity and repository tests before building the React frontend.
 
